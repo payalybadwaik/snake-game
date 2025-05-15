@@ -1,0 +1,144 @@
+/* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%;
+    background: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    user-select: none;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+    font-weight: 700;
+    color: #4caf50;
+    text-shadow: 0 0 5px #4caf50aa;
+  }
+  #game-container {
+    position: relative;
+    width: 90vmin;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    background: #222;
+    border: 4px solid #4caf50;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #4caf50aa;
+    touch-action: none;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 12px;
+    background-color: #000;
+  }
+  #scoreboard {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  #message {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #ff5252;
+    text-align: center;
+    min-height: 1.4rem;
+  }
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 25px;
+    border: none;
+    background: #4caf50;
+    color: #121212;
+    box-shadow: 0 5px 10px #388e3caa;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    user-select: none;
+  }
+  button:hover,
+  button:focus {
+    background: #388e3c;
+    outline: none;
+  }
+
+  /* Direction buttons container and layout */
+  #direction-buttons {
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 1rem;
+    user-select: none;
+  }
+  #direction-buttons button {
+    padding: 0;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #4caf50;
+    color: #121212;
+    box-shadow: 0 4px 8px #388e3caa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #direction-buttons button:active {
+    background: #388e3c;
+  }
+  /* Position buttons for direction */
+  #btn-up {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #btn-left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #btn-down {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #btn-right {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    #scoreboard {
+      font-size: 1rem;
+    }
+    button#startButton {
+      font-size: 1rem;
+      padding: 0.4rem 1.2rem;
+    }
+    #direction-buttons {
+      grid-template-columns: 50px 50px 50px;
+      grid-template-rows: 50px 50px;
+      gap: 6px;
+      margin-top: 0.75rem;
+    }
+    #direction-buttons button {
+      width: 50px;
+      height: 50px;
+      font-size: 1.6rem;
+      line-height: 50px;
+      box-shadow: 0 3px 6px #388e3caa;
+    }
+  }
