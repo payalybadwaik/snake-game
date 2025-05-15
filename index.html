@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Snake Game</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+    </head>
+    <body>
+    <h1>Snake Game</h1>
+    <div id="game-container" aria-label="Snake game area">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
+    <div id="scoreboard" aria-live="polite" aria-atomic="true">Score: 0</div>
+    <div id="message" role="alert" aria-live="assertive"></div>
+
+    <div id="direction-buttons" aria-label="Snake movement controls" role="group">
+      <button id="btn-up" aria-label="Move Up" title="Up">&#9650;</button>
+      <button id="btn-left" aria-label="Move Left" title="Left">&#9664;</button>
+      <button id="btn-down" aria-label="Move Down" title="Down">&#9660;</button>
+      <button id="btn-right" aria-label="Move Right" title="Right">&#9654;</button>
+    </div>
+
+    <button id="startButton" aria-label="Start or Restart game">Start Game</button>
+    <script src="script.js"></script>
+  </body>
+</html>
