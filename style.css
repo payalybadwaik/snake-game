@@ -127,6 +127,7 @@
     button#startButton {
       font-size: 1rem;
       padding: 0.4rem 1.2rem;
+      margin-top: 2rem;
     }
     #direction-buttons {
       grid-template-columns: 50px 50px 50px;
