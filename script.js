@@ -2,8 +2,10 @@
   const canvas = document.getElementById('gameCanvas');
   const ctx = canvas.getContext('2d');
   const scoreBoard = document.getElementById('scoreboard');
+  const highscoreboard = document.getElementById('highscoreboard'); //
   const messageBox = document.getElementById('message');
   const startButton = document.getElementById('startButton');
+  // const highScoreButton = document.getElementById('highScoreButton'); //
 
   // Direction buttons
   const btnUp = document.getElementById('btn-up');
@@ -21,6 +23,7 @@
   let velocity = {x:0, y:0};
   let food = {x:0, y:0};
   let score = 0;
+  let highScore = localStorage.getItem('snakeHighScore') || 0; //
   let gameOver = false;
   let gameRunning = false;
 
@@ -223,12 +226,28 @@
     if(newHead.x === food.x && newHead.y === food.y) {
       score++;
       scoreBoard.textContent = `Score: ${score}`;
+      updateScore(score); //
       placeFood();
     } else {
       // Remove tail
       snake.pop();
     }
   }
+
+   // Update high score display on page load
+  highscoreboard.textContent = `High Score: ${highScore}`; 
+
+  
+// Call this function whenever the score updates
+function updateScore(newScore) {
+  score = newScore;
+  scoreBoard.textContent = `Score: ${score}`;
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem('snakeHighScore', highScore);
+    highscoreboard.textContent = `High Score: ${highScore}`;
+  }
+}
 
   // Game loop controller
   let lastRenderTime = 0;
