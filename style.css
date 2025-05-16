@@ -43,12 +43,12 @@
     margin-top: 1rem;
     font-size: 1.25rem;
     font-weight: 600;
-    margin-right: 480px;
+    text-align: center;
   }
   #highscoreboard {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-left: 440px;
+    text-align: center;
   }
   #message {
     margin-top: 1rem;
