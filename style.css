@@ -38,24 +38,28 @@
     border-radius: 12px;
     background-color: #000;
   }
-  
-  #scoreboard {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-align: center;
-  }
-  #highscoreboard {
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-align: center;
-  }
-  #message {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #ff5252;
-    text-align: center;
-    min-height: 1.4rem;
+  #scorebar {
+   display: flex;
+   font-weight: 600;
+   font-size: 1.25rem;
+   justify-content: space-between;
+   align-items: center;
+   width: 85vmin;
+   max-width: 600px;
+   margin-top: 1rem;
+ }
+#scoreboard {
+  text-align: left;
+}
+#highscoreboard {
+  text-align: right;
+}
+ #message {
+   margin-top: 1rem;
+   font-size: 1.1rem;
+   color: #ff5252;
+   text-align: center; 
+   min-height: 1.4rem;
   }
   button {
     margin-top: 1rem; 
